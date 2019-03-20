@@ -18,4 +18,4 @@ services:
       - "MYSQL_ROOT_PASSWORD=secret"
       - "MYSQL_DATABASE=goland"
     ports:
-      - "3306:3306"
+      - "33061:3306"
