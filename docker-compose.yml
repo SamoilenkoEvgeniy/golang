@@ -5,8 +5,8 @@ services:
     build: .
     command: go run main.go
     volumes:
-      - ./src:/go/src/app
-    working_dir: /go/src/app
+      - ./src:/go/src/
+    working_dir: /go/src/
     ports:
       - "3030:3001"
     environment:
