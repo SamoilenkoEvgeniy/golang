@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 
+	"./migrations"
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -25,7 +26,7 @@ func main() {
 	}
 	dbConnect()
 
-	migrations.indexMigration()
+	migrations.IndexMigration()
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello World from path: %s\n", r.URL.Path)

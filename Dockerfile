@@ -1,6 +1,6 @@
 FROM golang:alpine
 
-ADD ./src /go/src/
+ADD ./src /go/src/app
 
 WORKDIR /go/src/app
 
@@ -10,4 +10,4 @@ RUN apk add --no-cache git mercurial \
 
 ENV PORT=3001
 
-CMD ["go", "run", "app/main.go"]
+CMD ["go", "run", "main.go"]
